@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+    graphite:
+        image: "docker.hero3d.net/graphite"
+        restart: always
+        hostname: graphite
+        ports:
+            - 80:80
+            - 81:81
+            - 2003-2004:2003-2004
+            - 2023-2024:2023-2024
+            - 8125:8125/udp
+            - 8126:8126
+        volumes:
+            - ./conf/etc/grafana:/etc/graphana
+            - ./conf/opt/grqaphite/conf:/opt/graphite/conf 
+            - /var/lib/grafana:/var/lib/grafana
+            - /mnt/graphite/storage:/opt/graphite/storage
