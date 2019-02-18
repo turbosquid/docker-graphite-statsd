@@ -13,6 +13,6 @@ services:
             - 8126:8126
         volumes:
             - ./conf/etc/grafana:/etc/graphana
-            - ./conf/opt/grqaphite/conf:/opt/graphite/conf 
+            - ./conf/opt/graphite/conf:/opt/graphite/conf 
             - /var/lib/grafana:/var/lib/grafana
             - /mnt/graphite/storage:/opt/graphite/storage
